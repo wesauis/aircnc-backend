@@ -1,0 +1,222 @@
+_type: export
+__export_format: 4
+__export_date: 2019-10-05T23:44:09.087Z
+__export_source: insomnia.desktop.app:v7.0.0
+resources:
+  - _id: req_c28712906a0847398b37455a32cbd41a
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"date": "06 de Outubro"
+        }
+    created: 1570317186037
+    description: ""
+    headers:
+      - id: pair_fa7e425fcab44cc3a9943825cc54b3a8
+        name: Content-Type
+        value: application/json
+      - id: pair_a275059fdcdc4e2e8d5cde7407d6f06f
+        name: user_id
+        value: 5d99246236e5b45d7f726bb2
+    isPrivate: false
+    metaSortKey: -1570317186037
+    method: POST
+    modified: 1570317415332
+    name: store
+    parameters: []
+    parentId: fld_3a01a934b1154858b79f3ce30193cc45
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/spots/5d991cf5626f3f580c0534e5/bookings"
+    _type: request
+  - _id: fld_3a01a934b1154858b79f3ce30193cc45
+    created: 1570317174759
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1570317174759
+    modified: 1570317174759
+    name: Booking
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: request_group
+  - _id: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    created: 1570287759041
+    description: ""
+    modified: 1570287759041
+    name: rocketseat-week-9-backend
+    parentId: null
+    _type: workspace
+  - _id: req_e73c5d7478ad494683e032d4251d43ef
+    authentication: {}
+    body: {}
+    created: 1570316283595
+    description: ""
+    headers:
+      - id: pair_30fa5ca5bf6b431d9be4c80f53b7bf2a
+        name: user_id
+        value: 5d9911c19923d850588f6791
+    isPrivate: false
+    metaSortKey: -1570316283595
+    method: GET
+    modified: 1570316421511
+    name: show
+    parameters: []
+    parentId: fld_79ecaae1ad8445db966c1fd18b7cd9f7
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{base_url}}/dashboard"
+    _type: request
+  - _id: fld_79ecaae1ad8445db966c1fd18b7cd9f7
+    created: 1570316276306
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1570316276306
+    modified: 1570316276306
+    name: Dashboard
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: request_group
+  - _id: req_1e9f10ef046b48f5ba91035e655a6904
+    authentication: {}
+    body: {}
+    created: 1570315791554
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1570315791554
+    method: GET
+    modified: 1570316295858
+    name: index
+    parameters:
+      - id: pair_887dc75b43624638ae60f3fa44bc4dd5
+        name: tech
+        value: react
+    parentId: fld_75c7a68086254aab93211297056c9a79
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/spots"
+    _type: request
+  - _id: fld_75c7a68086254aab93211297056c9a79
+    created: 1570313091349
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1570313091349
+    modified: 1570313091349
+    name: Spot
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: request_group
+  - _id: req_1b11937cfc664ef7812783bd61c152f0
+    authentication: {}
+    body:
+      mimeType: multipart/form-data
+      params:
+        - fileName: /home/w2g/Imagens/Screenshot_20190930_203314.png
+          id: pair_8bce1eba42ba4704b7b0314763471d8e
+          name: thumbnail
+          type: file
+          value: ""
+        - id: pair_f038e781cf1d484fa4e1a282e7ec6be7
+          multiline: false
+          name: company
+          type: text
+          value: rocketseat
+        - id: pair_159b331920904357b085491a764f3218
+          name: price
+          value: "12"
+        - id: pair_e959af13af894c5d89a401e3efc993a5
+          name: techs
+          value: react, react-native, nodejs
+    created: 1570313103498
+    description: ""
+    headers:
+      - id: pair_bb11e3b4ca264c36a31566baeb57bfaf
+        name: Content-Type
+        value: multipart/form-data
+      - id: pair_1793e831523e4d2a8b8f136b9a41fa74
+        name: user_id
+        value: 5d9911c19923d850588f6791
+    isPrivate: false
+    metaSortKey: -1570313103498
+    method: POST
+    modified: 1570316293090
+    name: store
+    parameters: []
+    parentId: fld_75c7a68086254aab93211297056c9a79
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/spots"
+    _type: request
+  - _id: req_a47a78e96a214c4e800a0166bbda9515
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "smftp@ftpx.com"
+        }
+    created: 1570287862571
+    description: ""
+    headers:
+      - id: pair_6ee4b6cc923f480a81e95b9934665f61
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1570299655466
+    method: POST
+    modified: 1570317407751
+    name: store
+    parameters: []
+    parentId: fld_df79a903c9a14cf0a1442aa987491194
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: "{{ base_url  }}/sessions"
+    _type: request
+  - _id: fld_df79a903c9a14cf0a1442aa987491194
+    created: 1570311448361
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1570311448361
+    modified: 1570311448361
+    name: Session
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: request_group
+  - _id: env_f2945df0c64ed7ff4519d8dfd1b95ada04a74a6b
+    color: null
+    created: 1570287759156
+    data:
+      base_url: localhost:3333
+    dataPropertyOrder:
+      "&":
+        - base_url
+    isPrivate: false
+    metaSortKey: 1570287759156
+    modified: 1570287837304
+    name: Base Environment
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: environment
+  - _id: jar_f2945df0c64ed7ff4519d8dfd1b95ada04a74a6b
+    cookies: []
+    created: 1570287759164
+    modified: 1570287759164
+    name: Default Jar
+    parentId: wrk_6b98e0e12f5e4f4ab03aafdd2506c71e
+    _type: cookie_jar
