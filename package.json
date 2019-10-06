@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "prod": "tsc && node ./dist/server.js",
     "run:dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "run:prod": "node ./dist/server.js"
   },
@@ -15,10 +16,10 @@
     "dotenv-flow": "^3.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.3",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
-    "ts-node-dev": "^1.0.0-pre.43",
-    "tsc": "^1.20150623.0"
+    "ts-node-dev": "^1.0.0-pre.43"
   }
 }
