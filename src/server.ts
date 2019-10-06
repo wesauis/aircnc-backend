@@ -10,9 +10,9 @@ const app = express();
 app.disable('x-powered-by');
 
 const MONGODB_URL = process.env.MONGODB_URL.replace(
-  '$MONGODB_USER',
-  process.env.MONGODB_USER,
-).replace('$MONGODB_PASS', process.env.MONGODB_PASS);
+  '<password>',
+  process.env.MONGODB_PASS,
+);
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => logger.fine('sucessfully conected to mongodb atlas'))
