@@ -4,8 +4,8 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "npm:install": "npm install -g tsc ts-node-dev && npm install",
-    "yarn:install": "yarn global add tsc ts-node-dev && yarn install",
+    "npm:add": "npm install -g typescript ts-node-dev",
+    "yarn:add": "yarn global add typescript ts-node-dev",
     "build": "tsc",
     "prod": "tsc && node ./dist/server.js",
     "run:dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
