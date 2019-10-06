@@ -1,7 +1,7 @@
 node_modules/
 dist/
 
-uploads/
+uploads/*
 !uploads/.gitkeep
 
 .env.local
