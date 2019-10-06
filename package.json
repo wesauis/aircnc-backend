@@ -4,6 +4,8 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
+    "npm:install": "npm install -g tsc ts-node-dev && npm install",
+    "yarn:install": "yarn global add tsc ts-node-dev && yarn install",
     "build": "tsc",
     "prod": "tsc && node ./dist/server.js",
     "run:dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
@@ -16,8 +18,7 @@
     "dotenv-flow": "^3.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.3",
-    "multer": "^1.4.2",
-    "typescript": "^3.6.3"
+    "multer": "^1.4.2"
   },
   "devDependencies": {
     "ts-node-dev": "^1.0.0-pre.43"
