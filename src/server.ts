@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv-flow').config();
 import http from 'http';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -9,11 +9,12 @@ import routes from './routes';
 const app = express();
 app.disable('x-powered-by');
 
+const MONGODB_URL = process.env.MONGODB_URL.replace(
+  '$MONGODB_USER',
+  process.env.MONGODB_USER,
+).replace('$MONGODB_PASS', process.env.MONGODB_PASS);
 mongoose
-  .connect(
-    'mongodb+srv://omni:omni@dev-qh4c7.mongodb.net/dev?retryWrites=true&w=majority',
-    { useNewUrlParser: true, useUnifiedTopology: true },
-  )
+  .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => logger.fine('sucessfully conected to mongodb atlas'))
   .catch(error => {
     console.error(error);
