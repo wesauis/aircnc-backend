@@ -2,10 +2,11 @@ require('dotenv-flow').config();
 import http from 'http';
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
+import path from 'path';
 
 import logger from './logger';
 import routes from './routes';
-import cors from 'cors';
 
 const app = express();
 app.disable('x-powered-by');
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 const server = http.createServer(app);
