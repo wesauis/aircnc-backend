@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 
 import logger from './logger';
 import routes from './routes';
+import cors from 'cors';
 
 const app = express();
 app.disable('x-powered-by');
@@ -22,6 +23,7 @@ mongoose
     server.close();
   });
 
+app.use(cors());
 /**
  * Log in the console the user-agent and the requested route
  */
