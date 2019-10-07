@@ -13,7 +13,7 @@
 - the password must be entered in the .env file in its place
     
 ### Available Scripts
-> i'm using yarn if you prefer npm replace `yarn` with` npm run`
+> i'm using yarn if you prefer npm replace `yarn` with `npm run`
 
 #### `yarn run:dev`
 
