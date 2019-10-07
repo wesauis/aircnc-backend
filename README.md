@@ -12,21 +12,21 @@
 - enter username in the link and leave the password as <password>
 - the password must be entered in the .env file in its place
     
-#### Avaliable Scripts
+### Available Scripts
 > i'm using yarn if you prefer npm replace `yarn` with` npm run`
 
-##### `yarn run:dev`
+#### `yarn run:dev`
 
 start the server and restart if the code changes
 
-##### `yarn run:prod`
+#### `yarn run:prod`
 
 compiles and runs the server
 
-##### `yarn build`
+#### `yarn build`
 
 compile server to dist folder
 
-##### `yarn start`
+#### `yarn start`
 
 start a compiled version
