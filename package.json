@@ -4,10 +4,10 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
+    "start": "node ./dist/server.js",
     "build": "tsc",
-    "prod": "tsc && node ./dist/server.js",
     "run:dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
-    "run:prod": "node ./dist/server.js"
+    "run:prod": "tsc && node ./dist/server.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.6",
