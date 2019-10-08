@@ -1,11 +1,11 @@
 require('dotenv-flow').config();
-import http from 'http';
-import express from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
+import express from 'express';
+import http from 'http';
+import mongoose from 'mongoose';
 import path from 'path';
 import socketio from 'socket.io';
-
+import * as I from './interfaces';
 import logger from './logger';
 import routes from './routes';
 
@@ -22,7 +22,7 @@ io.on('connection', socket => {
   const { user_id } = socket.handshake.query;
   connectedUsers[user_id] = socket.id;
 });
-app.use((req: any, res, next) => {
+app.use((req: I.Request, res, next) => {
   req.io = io;
   req.connectedUsers = connectedUsers;
   return next();

@@ -1,11 +1,10 @@
-import { Response } from 'express';
-
+import * as I from '../interfaces';
 import Booking from '../models/Booking';
 
 // @todo make only the owner of the spot approve
 
 export default {
-  async store(req: any, res: Response) {
+  async store(req: I.Request, res: I.Response) {
     const { booking_id } = req.params;
 
     const booking: any = await Booking.findById(booking_id).populate('spot');
