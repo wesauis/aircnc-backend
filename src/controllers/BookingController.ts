@@ -15,7 +15,7 @@ export default {
     const spot = await Spot.findById(spot_id);
     if (!spot) return res.status(400).json({ error: 'unknown spot' });
 
-    const booking: any = await Booking.create({
+    const booking: I.DocBooking = await Booking.create({
       user: user_id,
       spot: spot_id,
       date,
@@ -26,8 +26,10 @@ export default {
       .populate('spot')
       .execPopulate();
 
-    const ownerSocket = req.connectedUsers[booking.spot.user];
-    if (ownerSocket) req.io.to(ownerSocket).emit('booking_request', booking);
+    const ownerSocketID =
+      req.connectedUsers[String((booking.spot as I.Spot).user)];
+    if (ownerSocketID)
+      req.io.to(ownerSocketID).emit('booking_request', booking);
 
     return res.json(booking);
   },

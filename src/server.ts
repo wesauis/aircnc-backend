@@ -9,7 +9,6 @@ import * as I from './interfaces';
 import logger from './logger';
 import routes from './routes';
 
-// @todo replace any type with the correct one
 const connectedUsers: I.ConnectedUsers = {};
 
 const app = express();

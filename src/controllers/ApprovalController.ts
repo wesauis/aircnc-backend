@@ -7,11 +7,13 @@ export default {
   async store(req: I.Request, res: I.Response) {
     const { booking_id } = req.params;
 
-    const booking: any = await Booking.findById(booking_id).populate('spot');
+    const booking: I.DocBooking = await Booking.findById(booking_id).populate(
+      'spot',
+    );
     booking.approved = true;
     await booking.save();
 
-    const bookingUserSocket = req.connectedUsers[booking.user];
+    const bookingUserSocket = req.connectedUsers[String(booking.user)];
     if (bookingUserSocket)
       req.io.to(bookingUserSocket).emit('booking_response', booking);
 
