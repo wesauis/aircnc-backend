@@ -1,10 +1,9 @@
-import { Request, Response } from 'express';
-
-import User from '../models/User';
+import * as I from '../interfaces';
 import Spot from '../models/Spot';
+import User from '../models/User';
 
 export default {
-  async index(req: Request, res: Response) {
+  async index(req: I.Request, res: I.Response) {
     const { tech } = req.query;
 
     const spots = await Spot.find({ techs: tech });
@@ -12,7 +11,7 @@ export default {
     return res.json(spots);
   },
 
-  async store(req: Request, res: Response) {
+  async store(req: I.Request, res: I.Response) {
     const { filename } = req.file;
     const { company, techs, price } = req.body;
     const { user_id } = req.headers;

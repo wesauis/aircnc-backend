@@ -1,10 +1,9 @@
-import { Request, Response } from 'express';
-
-import User from '../models/User';
+import * as I from '../interfaces';
 import Spot from '../models/Spot';
+import User from '../models/User';
 
 export default {
-  async show(req: Request, res: Response) {
+  async show(req: I.Request, res: I.Response) {
     const { user_id } = req.headers;
 
     const user = await User.findById(user_id);

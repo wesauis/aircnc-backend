@@ -1,13 +1,12 @@
 import { Router } from 'express';
 import multer from 'multer';
-
 import uploadConfig from './configs/upload';
+import ApprovalController from './controllers/ApprovalController';
+import BookingController from './controllers/BookingController';
+import DashboardController from './controllers/DashboardController';
+import RejectionController from './controllers/RejectionController';
 import SessionController from './controllers/SessionController';
 import SpotController from './controllers/SpotController';
-import DashboardController from './controllers/DashboardController';
-import BookingController from './controllers/BookingController';
-import RejectionController from './controllers/RejectionController';
-import ApprovalController from './controllers/ApprovalController';
 
 const routes = Router();
 const upload = multer(uploadConfig);
