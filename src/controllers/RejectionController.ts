@@ -16,6 +16,8 @@ export default {
     if (bookingUserSocket)
       req.io.to(bookingUserSocket).emit('booking_response', booking);
 
+    console.log(booking);
+
     return res.json(booking);
   },
 };
