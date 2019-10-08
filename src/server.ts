@@ -10,7 +10,7 @@ import logger from './logger';
 import routes from './routes';
 
 // @todo replace any type with the correct one
-const connectedUsers: any = {};
+const connectedUsers: I.ConnectedUsers = {};
 
 const app = express();
 app.disable('x-powered-by');

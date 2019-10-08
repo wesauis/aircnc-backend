@@ -5,7 +5,11 @@ export interface Request extends express.Request {
   // socketio
   io: socketio.Server;
   // user_id:socket_id
-  connectedUsers: any;
+  connectedUsers: ConnectedUsers;
 }
 
 export interface Response extends express.Response {}
+
+export interface ConnectedUsers {
+  [key: string]: string;
+}
