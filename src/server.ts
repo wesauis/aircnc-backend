@@ -9,6 +9,7 @@ import socketio from 'socket.io';
 import logger from './logger';
 import routes from './routes';
 
+// TODO: fix "any" types
 // in production, use a fast db
 const connectedUsers: any = {};
 
