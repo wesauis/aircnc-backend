@@ -1,4 +1,3 @@
-import { Response } from 'express';
 import * as I from '../interfaces';
 import Spot from '../models/Spot';
 import User from '../models/User';
@@ -12,7 +11,7 @@ export default {
     return res.json(spots);
   },
 
-  async store(req: I.Request, res: Response) {
+  async store(req: I.Request, res: I.Response) {
     const { filename } = req.file;
     const { company, techs, price } = req.body;
     const { user_id } = req.headers;
