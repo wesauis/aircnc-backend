@@ -2,7 +2,7 @@ import { Response } from 'express';
 
 import Booking from '../models/Booking';
 
-// TODO: only the owner can approve
+// @todo make only the owner of the spot approve
 
 export default {
   async store(req: any, res: Response) {

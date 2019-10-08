@@ -2,7 +2,7 @@ import { Response } from 'express';
 
 import Booking from '../models/Booking';
 
-// TODO: only the owner can reject
+// @todo make only the owner of the spot evoke
 
 export default {
   async store(req: any, res: Response) {
