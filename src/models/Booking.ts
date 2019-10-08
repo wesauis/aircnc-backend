@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const BookingSchema = new mongoose.Schema({
   date: String,
-  aproved: Boolean,
+  approved: Boolean,
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
